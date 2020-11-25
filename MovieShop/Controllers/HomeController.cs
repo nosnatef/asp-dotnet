@@ -22,6 +22,8 @@ namespace MovieShop.Controllers
         {
             return View();
             // return /Views/Home/Index.cshtml
+            // Alternatively, you can do View("abc");
+            // It will find the file with name abc
         }
 
         public IActionResult Privacy()

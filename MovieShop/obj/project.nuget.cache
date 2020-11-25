@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9/s68c5gL8VegJsgC4aZs47FH0/9TL0hAMNDxGtWdA4TbIuy0Qs7M8IbOddS2DJixkpkxLzPMdnpsP3Vl8m8oA==",
+  "dgSpecHash": "kqUpVMlBTu4DROvpL/ifsDcYWFsFtBpoTYVsYr8nmBJBhjncdBALYrLt4zCGx+FB0Ooxkg2YW2EKdixkyR82RA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\shizi\\source\\repos\\MovieShop\\MovieShop\\MovieShop.csproj",
+  "projectFilePath": "C:\\Users\\shizi\\source\\repos\\MovieShop\\MovieShop\\MovieShop.Web.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
