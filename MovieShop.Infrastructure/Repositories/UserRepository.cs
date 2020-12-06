@@ -16,7 +16,7 @@ namespace MovieShop.Infrastructure.Repositories
         }
         public async Task<User> GetUserByEmail(string email)
         {
-            
+            throw new NotImplementedException();
         }
 
     }

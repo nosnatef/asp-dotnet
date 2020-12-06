@@ -11,6 +11,10 @@ using System.Threading.Tasks;
 using MovieShop.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Data.SqlClient;
+using MovieShop.Core.ServiceInterfaces;
+using MovieShop.Infrastructure.Services;
+using MovieShop.Core.RepositoryInterfaces;
+using MovieShop.Core.Repositories;
 
 namespace MovieShop
 {
@@ -26,10 +30,17 @@ namespace MovieShop
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            // .NET core has builtin IOC support
+
             services.AddControllersWithViews();
 
             services.AddDbContext<MovieShopDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString(("MovieShopDbConnection"))));
+
+            // IMovieService will be replaced by MovieService
+            services.AddScoped<IMovieService, MovieService>();
+            services.AddScoped<IMovieRepository, MovieRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

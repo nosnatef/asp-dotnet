@@ -74,3 +74,4 @@ C:\Users\shizi\source\repos\MovieShop\MovieShop\obj\Debug\net5.0\MovieShop.Web.p
 C:\Users\shizi\source\repos\MovieShop\MovieShop\obj\Debug\net5.0\MovieShop.Web.genruntimeconfig.cache
 C:\Users\shizi\source\repos\MovieShop\MovieShop\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
 C:\Users\shizi\source\repos\MovieShop\MovieShop\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\shizi\source\repos\MovieShop\MovieShop\obj\Debug\net5.0\Razor\Views\Shared\_MovieCard.cshtml.g.cs

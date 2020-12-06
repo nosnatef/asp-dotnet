@@ -1,4 +1,5 @@
 ﻿using MovieShop.Core.Entities;
+using MovieShop.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
