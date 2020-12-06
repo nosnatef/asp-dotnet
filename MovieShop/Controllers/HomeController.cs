@@ -29,9 +29,8 @@ namespace MovieShop.Controllers
             // return /Views/Home/Index.cshtml
             // Alternatively, you can do View("abc");
             // It will find the file with name abc
-            var testdata = "dude";
-            ViewBag.myproperty = testdata;
-            return View();
+            var topGrossingMovies = await _movieService.GetHighestGrossingMovies();
+            return View(topGrossingMovies);
         }
 
         public IActionResult Privacy()

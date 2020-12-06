@@ -75,3 +75,4 @@ C:\Users\shizi\source\repos\MovieShop\MovieShop\obj\Debug\net5.0\MovieShop.Web.g
 C:\Users\shizi\source\repos\MovieShop\MovieShop\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
 C:\Users\shizi\source\repos\MovieShop\MovieShop\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\shizi\source\repos\MovieShop\MovieShop\obj\Debug\net5.0\Razor\Views\Shared\_MovieCard.cshtml.g.cs
+C:\Users\shizi\source\repos\MovieShop\MovieShop\obj\Debug\net5.0\Razor\Views\Shared\Components\Genres\Default.cshtml.g.cs

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using MovieShop.Core.Models;
+using MovieShop.Core.Models.Response;
 using MovieShop.Core.Repositories;
 using MovieShop.Core.RepositoryInterfaces;
 using MovieShop.Core.ServiceInterfaces;
