@@ -1,4 +1,5 @@
 ﻿using MovieShop.Core.Entities;
+using MovieShop.Core.Models.Request;
 using MovieShop.Core.Models.Response;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ namespace MovieShop.Core.ServiceInterfaces
     {
         /**
         Task<UserLoginResponseModel> ValidateUser(string email, string password);
-        Task<UserRegisterResponseModel> CreateUser(UserRegisterRequestModel requestModel);
+        
         Task<UserRegisterResponseModel> GetUserDetails(int id);
         Task<User> GetUser(string email);
         Task<PagedResultSet<User>> GetAllUsersByPagination(int pageSize = 20, int page = 0, string lastName = "");
@@ -27,5 +28,6 @@ namespace MovieShop.Core.ServiceInterfaces
         **/
         Task DeleteMovieReview(int userId, int movieId);
         Task<ReviewResponseModel> GetAllReviewsByUser(int id);
+        Task<UserRegisterResponseModel> CreateUser(UserRegisterRequestModel requestModel);
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MovieShop.Core.Models.Request;
+using MovieShop.Core.ServiceInterfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,14 @@ namespace MovieShop.Web.Controllers
 {
     public class AccountController : Controller
     {
+
+        private readonly IUserService _userService;
+
+        public AccountController(IUserService userService)
+        {
+            _userService = userService;
+        }
+
         [HttpGet]
         public async Task<IActionResult> Register()
         {
@@ -20,6 +29,10 @@ namespace MovieShop.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(UserRegisterRequestModel userRegisterRequestModel)
         {
+            if (ModelState.IsValid)
+            {
+                await _userService.CreateUser(userRegisterRequestModel);
+            }
             return View();
         }
 

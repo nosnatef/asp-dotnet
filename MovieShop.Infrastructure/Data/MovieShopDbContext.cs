@@ -20,6 +20,20 @@ namespace MovieShop.Infrastructure.Data
         {
             modelBuilder.Entity<Movie>(ConfigureMovie);
             modelBuilder.Entity<Trailer>(ConfigureTrailer);
+            modelBuilder.Entity<User>(ConfigureUser);
+        }
+
+        private void ConfigureUser(EntityTypeBuilder<User> builder)
+        {
+            builder.ToTable("User");
+            builder.HasKey(u => u.Id);
+            builder.Property(u => u.FirstName).IsRequired().HasMaxLength(256);
+            builder.Property(u => u.LastName).IsRequired().HasMaxLength(256);
+            builder.Property(u => u.Email).IsRequired().HasMaxLength(256);
+            builder.Property(u => u.HashedPassword).HasMaxLength(256);
+            builder.Property(u => u.Salt).HasMaxLength(256);
+            builder.Property(u => u.PhoneNumber).HasMaxLength(256);
+
         }
 
         private void ConfigureTrailer(EntityTypeBuilder<Trailer> builder)
@@ -55,6 +69,8 @@ namespace MovieShop.Infrastructure.Data
         public DbSet<Genre> Genres { get; set; }
 
         public DbSet<Movie> Movies { get; set; }
+
+        public DbSet<User> Users { get; set; }
 
     }
 }
