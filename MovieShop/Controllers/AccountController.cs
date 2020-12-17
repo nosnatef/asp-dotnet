@@ -1,9 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Mvc;
 using MovieShop.Core.Models.Request;
 using MovieShop.Core.ServiceInterfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace MovieShop.Web.Controllers
@@ -31,7 +34,8 @@ namespace MovieShop.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                await _userService.CreateUser(userRegisterRequestModel);
+                var createdUser = await _userService.CreateUser(userRegisterRequestModel);
+                return RedirectToAction("Login");
             }
             return View();
         }
@@ -43,9 +47,30 @@ namespace MovieShop.Web.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Login(LoginRequestModel loginRequest)
+        public async Task<IActionResult> Login(LoginRequestModel loginRequest, string returnUrl = null)
         {
-            return View();
+            returnUrl ??= Url.Content("~/");
+            if (!ModelState.IsValid) return View();
+            var user = await _userService.ValidateUser(loginRequest.Email, loginRequest.Password);
+            if (user == null)
+            {
+                ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                return View();
+            }
+            var claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.Name, user.Email),
+                new Claim(ClaimTypes.GivenName, user.FirstName),
+                new Claim(ClaimTypes.Surname,  user.LastName),
+                new Claim(ClaimTypes.NameIdentifier,  user.Id.ToString())
+            };
+
+            var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+
+            await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
+                new ClaimsPrincipal(claimsIdentity));
+
+            return LocalRedirect(returnUrl);
         }
 
     }

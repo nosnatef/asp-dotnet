@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "+a3KE9+vtjCDbZ0h1x/xuJeoUbxIHntNfgAkRdu+GuIvhHD6HGtLE0azqoDnCA+FMAK1RodyK1jmv+SB2FA9Wg==",
+  "dgSpecHash": "/o+j1FJXTcoNY+NEVVKwOW0Ag4cT4QJKm+iNABBuoKT7OZY5EIRDbQQF0DRT8WaMpa8aM7eoMaw1tQDlR9aPEg==",
   "success": true,
   "projectFilePath": "C:\\Users\\shizi\\source\\repos\\MovieShop\\MovieShop.Infrastructure\\MovieShop.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,8 @@
     "C:\\Users\\shizi\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
     "C:\\Users\\shizi\\.nuget\\packages\\microsoft.aspnetcore.authorization\\2.2.0\\microsoft.aspnetcore.authorization.2.2.0.nupkg.sha512",
     "C:\\Users\\shizi\\.nuget\\packages\\microsoft.aspnetcore.authorization.policy\\2.2.0\\microsoft.aspnetcore.authorization.policy.2.2.0.nupkg.sha512",
+    "C:\\Users\\shizi\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.1\\microsoft.aspnetcore.cryptography.internal.5.0.1.nupkg.sha512",
+    "C:\\Users\\shizi\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.1\\microsoft.aspnetcore.cryptography.keyderivation.5.0.1.nupkg.sha512",
     "C:\\Users\\shizi\\.nuget\\packages\\microsoft.aspnetcore.hosting.abstractions\\2.2.0\\microsoft.aspnetcore.hosting.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\shizi\\.nuget\\packages\\microsoft.aspnetcore.hosting.server.abstractions\\2.2.0\\microsoft.aspnetcore.hosting.server.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\shizi\\.nuget\\packages\\microsoft.aspnetcore.http\\2.2.0\\microsoft.aspnetcore.http.2.2.0.nupkg.sha512",

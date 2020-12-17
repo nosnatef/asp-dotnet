@@ -11,7 +11,7 @@ namespace MovieShop.Core.ServiceInterfaces
     public interface IUserService
     {
         /**
-        Task<UserLoginResponseModel> ValidateUser(string email, string password);
+        
         
         Task<UserRegisterResponseModel> GetUserDetails(int id);
         Task<User> GetUser(string email);
@@ -29,5 +29,6 @@ namespace MovieShop.Core.ServiceInterfaces
         Task DeleteMovieReview(int userId, int movieId);
         Task<ReviewResponseModel> GetAllReviewsByUser(int id);
         Task<UserRegisterResponseModel> CreateUser(UserRegisterRequestModel requestModel);
+        Task<UserLoginResponseModel> ValidateUser(string email, string password);
     }
 }
